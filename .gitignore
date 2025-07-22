@@ -25,3 +25,6 @@ __pycache__/
 *.pkl
 *.h5
 *.db
+
+.gitconfig
+snap/
