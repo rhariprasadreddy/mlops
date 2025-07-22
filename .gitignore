@@ -2,6 +2,7 @@
 venv/
 venvs/
 .env/
+*.so
 
 # Ignore VSCode settings
 .vscode/
