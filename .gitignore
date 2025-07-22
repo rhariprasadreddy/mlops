@@ -1,0 +1,27 @@
+# Ignore virtual environments
+venv/
+venvs/
+.env/
+
+# Ignore VSCode settings
+.vscode/
+.vscode-server/
+
+# Ignore pycache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Ignore notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+
+# Ignore large data files or binaries
+*.log
+*.csv
+*.tsv
+*.pkl
+*.h5
+*.db
