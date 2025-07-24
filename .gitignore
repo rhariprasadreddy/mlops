@@ -29,3 +29,19 @@ __pycache__/
 
 .gitconfig
 snap/
+*.pkl
+*.model
+
+# DVC tracked files will be handled by DVC
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE config
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+/data
