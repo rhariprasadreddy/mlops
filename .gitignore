@@ -1,47 +1,47 @@
-# Ignore virtual environments
-venv/
-venvs/
-.env/
-*.so
-
-# Ignore VSCode settings
-.vscode/
-.vscode-server/
-
-# Ignore pycache and compiled files
+# === Python & Jupyter Cache ===
 __pycache__/
 *.py[cod]
 *.so
-
-# Ignore notebooks checkpoints
-.ipynb_checkpoints/
-
-# Ignore system files
+*.ipynb_checkpoints
+*.egg-info/
 .DS_Store
 
-# Ignore large data files or binaries
-*.log
-*.csv
-*.tsv
-*.pkl
-*.h5
-*.db
+# === Virtual Environments ===
+venv/
+.venv/
+env/
+ENV/
+*.env
 
-.gitconfig
-snap/
-*.pkl
-*.model
-
-# DVC tracked files will be handled by DVC
-
-# Jupyter checkpoints
-.ipynb_checkpoints/
-
-# IDE config
+# === IDE Configs ===
 .vscode/
 .idea/
 
-# OS-specific files
-.DS_Store
+# === DVC Artifacts ===
+/data/
+data/**/*
+!data.dvc
+!.dvc/           # This keeps DVC tracking metadata files
+*.dvc.lock
+.cache/
+.dvc/tmp/
+.dvc/cache/
+.dvc/plots/
+.dvc/stage.d/
+
+# === MLflow Artifacts ===
+mlruns/
+mlruns/**
+
+# === Logs, outputs ===
+*.log
+logs/
+output/
+outputs/
+artifacts/
+checkpoints/
+
+# === OS Specific ===
 Thumbs.db
-/data
+ehthumbs.db
+Icon?
