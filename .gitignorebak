@@ -1,0 +1,47 @@
+# Ignore virtual environments
+venv/
+venvs/
+.env/
+*.so
+
+# Ignore VSCode settings
+.vscode/
+.vscode-server/
+
+# Ignore pycache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Ignore notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+
+# Ignore large data files or binaries
+*.log
+*.csv
+*.tsv
+*.pkl
+*.h5
+*.db
+
+.gitconfig
+snap/
+*.pkl
+*.model
+
+# DVC tracked files will be handled by DVC
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDE config
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+/data
