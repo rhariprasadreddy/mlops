@@ -5,6 +5,13 @@ __pycache__/
 *.ipynb_checkpoints
 *.egg-info/
 .DS_Store
+# Home/user directories accidentally tracked
+.bash_history
+.bash_logout
+.bashrc
+.cache/
+.dotnet/
+
 
 # === Virtual Environments ===
 venv/
@@ -45,3 +52,4 @@ checkpoints/
 Thumbs.db
 ehthumbs.db
 Icon?
+mlops/
