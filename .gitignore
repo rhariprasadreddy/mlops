@@ -1,55 +1,43 @@
-# === Python & Jupyter Cache ===
-__pycache__/
-*.py[cod]
-*.so
-*.ipynb_checkpoints
-*.egg-info/
-.DS_Store
-# Home/user directories accidentally tracked
-.bash_history
-.bash_logout
-.bashrc
-.cache/
-.dotnet/
-
-
-# === Virtual Environments ===
+# Virtual environment
 venv/
 .venv/
 env/
-ENV/
-*.env
 
-# === IDE Configs ===
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.so
+
+# Data and models
+*.csv
+*.pt
+*.pkl
+*.joblib
+
+# DVC
+.dvc/
+*.dvc
+!.dvc
+data/
+data.dvc
+.dvc/cache/
+
+# MLflow
+mlruns/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# System
+.DS_Store
+.snap/
+.cache/
+.local/
+.dotnet/
+
+# IDEs
 .vscode/
 .idea/
 
-# === DVC Artifacts ===
-/data/
-data/**/*
-!data.dvc
-!.dvc/           # This keeps DVC tracking metadata files
-*.dvc.lock
-.cache/
-.dvc/tmp/
-.dvc/cache/
-.dvc/plots/
-.dvc/stage.d/
-
-# === MLflow Artifacts ===
-mlruns/
-mlruns/**
-
-# === Logs, outputs ===
+# Logs
 *.log
-logs/
-output/
-outputs/
-artifacts/
-checkpoints/
-
-# === OS Specific ===
-Thumbs.db
-ehthumbs.db
-Icon?
-mlops/
