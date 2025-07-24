@@ -1,6 +1,7 @@
 # Virtual environment
 venv/
 .venv/
+mlops/
 env/
 
 # Python artifacts
@@ -34,10 +35,19 @@ mlruns/
 .cache/
 .local/
 .dotnet/
-
+snap/
 # IDEs
 .vscode/
 .idea/
 
 # Logs
 *.log
+
+# Cache
+.cache/
+.dvc/cache/
+.dvc/tmp/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
