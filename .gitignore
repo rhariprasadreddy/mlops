@@ -28,13 +28,27 @@ __pycache__/
 Thumbs.db
 
 # DVC and data tracking
-.dvc/
-*.dvc
+
+# Allow DVC metadata
 !.dvc
-data/
-data.dvc
+!*.dvc
+!.dvcignore
+
+# Ignore DVC cache and temp
 .dvc/cache/
 .dvc/tmp/
+
+# Ignore actual data directories, but allow DVC metadata files
+housing/data/**
+!housing/data.dvc
+
+iris/data/**
+!iris/data.dvc
+
+fashion/data/**
+!fashion/data.dvc
+!fashion/data/raw.dvc
+
 
 # MLflow tracking files
 mlruns/
@@ -72,3 +86,4 @@ yarn.lock
 .cache/
 .local/
 .dotnet/
+.bash_history
