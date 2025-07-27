@@ -2,22 +2,18 @@
 venv/
 venvs/
 .venv/
-env/
 .env/
 *.egg-info/
 
-# Python artifacts and cache
+# Python cache
 __pycache__/
 *.py[cod]
-*.pyc
-*.pyo
-*.pyd
 *.so
 
-# Jupyter notebooks and checkpoints
+# Jupyter notebooks
 .ipynb_checkpoints/
 
-# VSCode and IDE/editor configs
+# IDE/editor configs
 .vscode/
 .vscode-server/
 .idea/
@@ -27,12 +23,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# DVC and data tracking
-.dvc/
-*.dvc
-!.dvc
-data/
-data.dvc
+# DVC artifacts/cache
 .dvc/cache/
 .dvc/tmp/
 
@@ -46,15 +37,14 @@ models/
 *.out
 *.err
 
-# Data and model artifacts
+# Data artifacts
 *.csv
 *.tsv
 *.pkl
-*.pt
-*.joblib
 *.h5
 *.zip
 *.tar.gz
+*.joblib
 
 # Docker artifacts
 *.tar
@@ -66,9 +56,5 @@ node_modules/
 package-lock.json
 yarn.lock
 
-# Git config and other system files
+# Git config
 .gitconfig
-.wget-hsts
-.cache/
-.local/
-.dotnet/
