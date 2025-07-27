@@ -1,0 +1,17 @@
+# Core runtime for inference
+torch==2.5.0
+torchvision==0.20.0
+intel-extension-for-pytorch==2.5.0
+pillow==10.3.0
+numpy==1.26.4
+
+# MLflow for loading Production model
+mlflow==2.13.1
+protobuf==4.25.3
+
+# Web app
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+
+# Optional logging or curl handling
+requests==2.31.0

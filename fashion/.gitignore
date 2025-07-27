@@ -1,0 +1,99 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.pth
+.pytest_cache/
+.coverage
+.tox/
+htmlcov/
+.nox/
+.mypy_cache/
+.dmypy.json
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+.ipynb_metadata/
+
+# MLflow
+mlruns/
+mlflow.db
+*.sqlite # If using a SQLite DB for MLflow tracking
+
+# DVC (Data Version Control)
+.dvc/
+.dvcignore # .dvcignore itself can be committed, but its behavior might be for ignored data
+data/ # Generally ignore the 'data' directory itself if using DVC to track it as a placeholder
+# If you are versioning data placeholders, the actual data files are ignored by DVC,
+# but the .dvc files and cached data usually go into .dvc/ or a .dvc/cache/.
+# If 'data/' contains large actual files, this ignores them from Git.
+
+# Models (Raw files - MLflow should handle tracked models)
+models/*.pth
+models/*.pt
+models/*.h5
+models/*.keras
+
+# IDEs
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+.Trash
+Thumbs.db
+
+# Logs
+*.log
+*.log.*
+# Ignore virtual environments
+venv/
+venvs/
+.env/
+*.so
+
+# Ignore VSCode settings
+.vscode/
+.vscode-server/
+
+# Ignore pycache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Ignore notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+
+# Ignore large data files or binaries
+*.log
+*.csv
+*.tsv
+*.pkl
+*.h5
+*.db
+
+.gitconfig
+snap/
