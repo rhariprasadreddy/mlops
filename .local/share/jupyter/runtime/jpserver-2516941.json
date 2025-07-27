@@ -1,0 +1,13 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "password": false,
+  "pid": 2516941,
+  "port": 8888,
+  "root_dir": "/home/mlops/fashion",
+  "secure": false,
+  "sock": "",
+  "token": "6386b44f2a55ef8d82a458ca998c158231f92ad77baafc1b",
+  "url": "http://localhost:8888/",
+  "version": "2.16.0"
+}

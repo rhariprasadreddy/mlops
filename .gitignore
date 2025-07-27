@@ -1,53 +1,55 @@
-# Virtual environment
+# Virtual environments
 venv/
+venvs/
 .venv/
-mlops/
 env/
+.env/
 
 # Python artifacts
 __pycache__/
 *.py[cod]
+*.pyc
+*.pyo
+*.pyd
 *.so
 
-# Data and models
-*.csv
-*.pt
-*.pkl
-*.joblib
+# VSCode and IDE settings
+.vscode/
+.vscode-server/
+.idea/
 
-# DVC
+# Data files and model artifacts
+*.csv
+*.tsv
+*.pkl
+*.pt
+*.joblib
+*.h5
+*.db
+
+# MLflow
+mlruns/
+
+# DVC and data tracking
 .dvc/
 *.dvc
 !.dvc
 data/
 data.dvc
 .dvc/cache/
+.dvc/tmp/
 
-# MLflow
-mlruns/
-
-# Jupyter
+# Jupyter notebooks
 .ipynb_checkpoints/
 
-# System
+# Logs
+*.log
+
+# System files
 .DS_Store
 .snap/
 .cache/
 .local/
 .dotnet/
-snap/
-# IDEs
-.vscode/
-.idea/
-
-# Logs
-*.log
-
-# Cache
-.cache/
-.dvc/cache/
-.dvc/tmp/
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+.gitconfig
+.wget-hsts

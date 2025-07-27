@@ -1,0 +1,13 @@
+{
+  "base_url": "/",
+  "hostname": "localhost",
+  "password": false,
+  "pid": 2122061,
+  "port": 8888,
+  "root_dir": "/home/mlops",
+  "secure": false,
+  "sock": "",
+  "token": "7cc61e3ff96ae59ddcdbe930f922d5ff39d279d774214663",
+  "url": "http://localhost:8888/",
+  "version": "2.16.0"
+}

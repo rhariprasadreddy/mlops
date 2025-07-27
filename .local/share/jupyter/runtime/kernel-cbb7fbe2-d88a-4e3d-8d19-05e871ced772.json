@@ -1,0 +1,13 @@
+{
+  "shell_port": 52051,
+  "iopub_port": 54495,
+  "stdin_port": 37293,
+  "control_port": 37593,
+  "hb_port": 46685,
+  "ip": "127.0.0.1",
+  "key": "89c17b67-26e6d86c460b1b53b186f730",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "python3",
+  "jupyter_session": "/home/mlops/fashion/notebooks/train_mlp.ipynb"
+}

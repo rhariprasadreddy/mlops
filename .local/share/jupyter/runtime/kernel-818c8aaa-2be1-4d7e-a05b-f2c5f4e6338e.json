@@ -1,0 +1,13 @@
+{
+  "shell_port": 36761,
+  "iopub_port": 37441,
+  "stdin_port": 55787,
+  "control_port": 58079,
+  "hb_port": 39345,
+  "ip": "127.0.0.1",
+  "key": "ff937bfc-09c3906d44044c25aeaca4ea",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "python3",
+  "jupyter_session": "/home/mlops/iris/notebooks/iris_rf_training.ipynb"
+}

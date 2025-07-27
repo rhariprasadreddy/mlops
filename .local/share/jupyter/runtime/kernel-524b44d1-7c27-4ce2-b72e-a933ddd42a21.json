@@ -1,0 +1,13 @@
+{
+  "shell_port": 37077,
+  "iopub_port": 48845,
+  "stdin_port": 57623,
+  "control_port": 42397,
+  "hb_port": 57773,
+  "ip": "127.0.0.1",
+  "key": "f4efce00-145a776bc1aee4b5572d3059",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "fashion_venv_kernel",
+  "jupyter_session": "/home/mlops/iris/notebooks/Iris_BestModel.ipynb"
+}
