@@ -1,0 +1,21 @@
+# Auto-created .gitignore
+data/processed/
+# Ignore DVC-tracked data directories
+/data/processed/
+/data/raw/
+
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore DVC cache and temporary files
+.dvc/tmp/
+.dvc/cache/
+/data
