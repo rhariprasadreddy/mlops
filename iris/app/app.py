@@ -5,7 +5,9 @@ import mlflow
 # Load model from MLflow registry
 try:
     mlflow.set_tracking_uri("http://host.docker.internal:5000")  # use this inside container
-    model = mlflow.pyfunc.load_model("models:/IrisBestModel/Production")
+    model = mlflow.pyfunc.load_model(
+        "models:/IrisBestModel/Production"
+    )
 except Exception as e:
     print("Failed to load model:", str(e))
     model = None
@@ -20,9 +22,11 @@ class_map = {
 # Initialize Flask app
 app = Flask(__name__)
 
+
 @app.route('/', methods=['GET'])
 def home():
     return "Iris Predictor API is running! Use POST /predict to get results."
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -34,10 +38,14 @@ def predict():
         input_df = pd.DataFrame([input_json])
 
         # Ensure column order
-        input_df = input_df[[
-            "sepal length (cm)", "sepal width (cm)", 
-            "petal length (cm)", "petal width (cm)"
-        ]]
+        input_df = input_df[
+            [
+                "sepal length (cm)",
+                "sepal width (cm)",
+                "petal length (cm)",
+                "petal width (cm)"
+            ]
+        ]
 
         prediction = model.predict(input_df)
         class_id = int(prediction[0])
@@ -50,6 +58,7 @@ def predict():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 400
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=8001)

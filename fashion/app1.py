@@ -47,9 +47,11 @@ html_form = '''
 {% endif %}
 '''
 
+
 @app.route('/')
 def index():
     return render_template_string(html_form)
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -66,7 +68,12 @@ def predict():
         label = class_names[predicted.item()]
         confidence = torch.softmax(output, dim=1)[0][predicted.item()].item()
 
-    return render_template_string(html_form, prediction=label, confidence=round(confidence, 4))
+    return render_template_string(
+        html_form,
+        prediction=label,
+        confidence=round(confidence, 4)
+    )
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001)

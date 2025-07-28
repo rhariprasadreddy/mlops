@@ -1,14 +1,17 @@
 # src/train_cnn.py
+
+import os
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
 import mlflow
 import mlflow.pytorch
-import os
+
 
 # Set MLflow experiment
 mlflow.set_experiment("FashionMNIST-CNN")
+
 
 # Define CNN Model
 class CNN(nn.Module):
@@ -35,12 +38,22 @@ class CNN(nn.Module):
         x = self.fc(x)
         return x
 
+
 # Data
 transform = transforms.ToTensor()
-train_data = datasets.FashionMNIST('./data', train=True, download=True, transform=transform)
-test_data = datasets.FashionMNIST('./data', train=False, download=True, transform=transform)
-train_loader = torch.utils.data.DataLoader(train_data, batch_size=64, shuffle=True)
-test_loader = torch.utils.data.DataLoader(test_data, batch_size=1000)
+train_data = datasets.FashionMNIST(
+    './data', train=True, download=True, transform=transform
+)
+test_data = datasets.FashionMNIST(
+    './data', train=False, download=True, transform=transform
+)
+train_loader = torch.utils.data.DataLoader(
+    train_data, batch_size=64, shuffle=True
+)
+test_loader = torch.utils.data.DataLoader(
+    test_data, batch_size=1000
+)
+
 
 # Training Function
 def train(model, epochs=5, lr=0.01):
@@ -61,6 +74,7 @@ def train(model, epochs=5, lr=0.01):
 
     return model
 
+
 # Test Function
 def evaluate(model):
     correct = 0
@@ -74,6 +88,7 @@ def evaluate(model):
             correct += (pred == y).sum().item()
     accuracy = 100 * correct / total
     return accuracy
+
 
 # Main Training with MLflow
 with mlflow.start_run(run_name="CNN_Fashion"):

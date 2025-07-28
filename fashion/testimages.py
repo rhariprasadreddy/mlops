@@ -14,3 +14,4 @@ for i in range(10):
     image.save(os.path.join(output_dir, f"test_img_{i}_label_{label}.png"))
 
 print(f"✅ Saved 10 test images to {output_dir}")
+
