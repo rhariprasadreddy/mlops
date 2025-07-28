@@ -27,14 +27,10 @@ def load_and_preprocess_data():
     X_test_scaled = scaler.transform(X_test)
 
     X_train_scaled_df = pd.DataFrame(
-        X_train_scaled,
-        columns=X_train.columns,
-        index=X_train.index
+        X_train_scaled, columns=X_train.columns, index=X_train.index
     )
     X_test_scaled_df = pd.DataFrame(
-        X_test_scaled,
-        columns=X_test.columns,
-        index=X_test.index
+        X_test_scaled, columns=X_test.columns, index=X_test.index
     )
 
     data_dir = "data/processed"
