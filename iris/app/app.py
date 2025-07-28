@@ -4,12 +4,14 @@ import mlflow
 
 # Load model from MLflow registry
 try:
-    mlflow.set_tracking_uri("http://host.docker.internal:5000")  # use this inside container
+    mlflow.set_tracking_uri("http://host.docker.internal:5000")
     model = mlflow.pyfunc.load_model(
         "models:/IrisBestModel/Production"
     )
 except Exception as e:
-    print("Failed to load model:", str(e))
+    print(
+        "Failed to load model: {}".format(str(e))
+    )
     model = None
 
 # Class label mapping
