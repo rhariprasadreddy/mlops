@@ -48,16 +48,9 @@ def load_and_preprocess_data():
     y_test.to_csv(
         os.path.join(data_dir, "y_test.csv"), index=False
     )
-
     print(f"Processed data saved to {data_dir}/")
-    print(
-        f"X_train shape: {X_train_scaled_df.shape}, "
-        f"y_train shape: {y_train.shape}"
-    )
-    print(
-        f"X_test shape: {X_test_scaled_df.shape}, "
-        f"y_test shape: {y_test.shape}"
-    )
+    print(f"X_train shape: {X_train_scaled_df.shape}, y_train shape: {y_train.shape}")
+    print(f"X_test shape: {X_test_scaled_df.shape}, y_test shape: {y_test.shape}")
 
     return X_train_scaled_df, X_test_scaled_df, y_train, y_test, scaler
 
