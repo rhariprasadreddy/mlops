@@ -27,19 +27,31 @@ def load_and_preprocess_data():
     X_test_scaled = scaler.transform(X_test)
 
     X_train_scaled_df = pd.DataFrame(
-        X_train_scaled, columns=X_train.columns, index=X_train.index
+        X_train_scaled,
+        columns=X_train.columns,
+        index=X_train.index
     )
     X_test_scaled_df = pd.DataFrame(
-        X_test_scaled, columns=X_test.columns, index=X_test.index
+        X_test_scaled,
+        columns=X_test.columns,
+        index=X_test.index
     )
 
     data_dir = "data/processed"
     os.makedirs(data_dir, exist_ok=True)
 
-    X_train_scaled_df.to_csv(os.path.join(data_dir, "X_train.csv"), index=False)
-    X_test_scaled_df.to_csv(os.path.join(data_dir, "X_test.csv"), index=False)
-    y_train.to_csv(os.path.join(data_dir, "y_train.csv"), index=False)
-    y_test.to_csv(os.path.join(data_dir, "y_test.csv"), index=False)
+    X_train_scaled_df.to_csv(
+        os.path.join(data_dir, "X_train.csv"), index=False
+    )
+    X_test_scaled_df.to_csv(
+        os.path.join(data_dir, "X_test.csv"), index=False
+    )
+    y_train.to_csv(
+        os.path.join(data_dir, "y_train.csv"), index=False
+    )
+    y_test.to_csv(
+        os.path.join(data_dir, "y_test.csv"), index=False
+    )
 
     print(f"Processed data saved to {data_dir}/")
     print(f"X_train shape: {X_train_scaled_df.shape}, y_train shape: {y_train.shape}")
