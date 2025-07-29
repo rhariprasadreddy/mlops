@@ -20,5 +20,6 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/iris-predictor:latest .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/iris-predictor:latest ./iris/app
         docker push ${{ secrets.DOCKER_USERNAME }}/iris-predictor:latest
+
